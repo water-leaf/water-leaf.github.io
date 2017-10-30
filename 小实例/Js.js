@@ -33,6 +33,7 @@ $(document).ready(function () {
         $("#picture").css({
             "width":"200px",
             "height":"200px",
+            "background-image","url(../img/s4.jpg)"
         });
     });
     $("#bg p").click(function () {
