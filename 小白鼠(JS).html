@@ -1,0 +1,247 @@
+<html>
+
+<head>
+    <title>练习1</title>
+</head>
+<style type="text/css">
+    #DIV1 {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border: 3px solid black;
+        margin: 15px;
+    }
+
+    #DIV2 {
+        display: none;
+        width: 250px;
+        height: 200px;
+        position: absolute;
+        /*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/
+        top: 24%;
+        /*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/
+        left: 40%;
+        z-index: 2;
+        /*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+        background-color: white;
+        border: 20px solid silver;
+        padding: 10px;
+        display: none;
+    }
+
+    #over {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        /*设置背景色透明度,1为完全不透明,IE需要使用filter:alpha(opacity=80);*/
+        filter: alpha(opacity=50);
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: silver;
+    }
+
+    #red,
+    #green,
+    #blue {
+        width: 40px;
+        height: 25px;
+        border: none;
+        color: white;
+    }
+
+    #red {
+        background-color: #ff5151;
+    }
+
+    #green {
+        background-color: #79ff78;
+    }
+
+    #blue {
+        background-color: #66b3ff;
+    }
+
+    #btn1,
+    #btn2,
+    #btn3,
+    #btn4,
+    #btn5,
+    #btn6 {
+        width: 40px;
+        height: 25px;
+    }
+
+    #reset,
+    #confirm {
+        width: 45px;
+        height: 30px;
+        margin: 10px;
+        background-color: rgb(100, 150, 250);
+    }
+
+    #setting {
+        width: 65px;
+        height: 30px;
+        border: none;
+        background-color: red;
+        color: white;
+    }
+</style>
+
+<script>
+    window.onload = function () {
+        var oSet = document.getElementById("setting");
+        var over = document.getElementById('over');
+        var oDIV1 = document.getElementById("DIV1");
+        var oDIV2 = document.getElementById("DIV2");
+        var oRed = document.getElementById("red");
+        var oGreen = document.getElementById("green");
+        var oBlue = document.getElementById("blue");
+        var oBtn1 = document.getElementById("btn1");
+        var oBtn2 = document.getElementById("btn2");
+        var oBtn3 = document.getElementById("btn3");
+        var oBtn4 = document.getElementById("btn4");
+        var oBtn5 = document.getElementById("btn5");
+        var oBtn6 = document.getElementById("btn6");
+        var oReset = document.getElementById("reset");
+        var oConfirm = document.getElementById("confirm");
+        oSet.onclick = show;
+        oRed.onclick = change_red;
+        oGreen.onclick = change_green;
+        oBlue.onclick = change_blue;
+        oBtn1.onclick = change_w1;
+        oBtn2.onclick = change_w2;
+        oBtn3.onclick = change_w3;
+        oBtn4.onclick = change_h1;
+        oBtn5.onclick = change_h2;
+        oBtn6.onclick = change_h3;
+        oReset.onclick = reset;
+        oConfirm.onclick = confirm;
+
+        oRed.onmouseover = function _red() {
+            oRed.style.backgroundColor = "red";
+        }
+        oGreen.onmouseover = function _green() {
+            oGreen.style.backgroundColor = "green";
+        }
+        oBlue.onmouseover = function _blue() {
+            oBlue.style.backgroundColor = "blue";
+        }
+        oRed.onmouseout = function _red() {
+            oRed.style.backgroundColor = "#ff5151";
+        }
+        oGreen.onmouseout = function _green() {
+            oGreen.style.backgroundColor = "#79ff78";
+        }
+        oBlue.onmouseout = function _blue() {
+            oBlue.style.backgroundColor = "#66b3ff";
+        }
+
+        oBtn1.onmouseover = function button1() {
+            oBtn1.style.backgroundColor = "orange";
+        }
+        oBtn2.onmouseover = function button2() {
+            oBtn2.style.backgroundColor = "orange";
+        }
+        oBtn3.onmouseover = function button3() {
+            oBtn3.style.backgroundColor = "orange";
+        }
+        oBtn4.onmouseover = function button4() {
+            oBtn4.style.backgroundColor = "orange";
+        }
+        oBtn5.onmouseover = function button5() {
+            oBtn5.style.backgroundColor = "orange";
+        }
+        oBtn6.onmouseover = function button6() {
+            oBtn6.style.backgroundColor = "orange";
+        }
+
+        oBtn1.onmouseout = function _button1() {
+            oBtn1.style.backgroundColor = "";
+        }
+        oBtn2.onmouseout = function _button2() {
+            oBtn2.style.backgroundColor = "";
+        }
+        oBtn3.onmouseout = function _button3() {
+            oBtn3.style.backgroundColor = "";
+        }
+        oBtn4.onmouseout = function _button4() {
+            oBtn4.style.backgroundColor = "";
+        }
+        oBtn5.onmouseout = function _button5() {
+            oBtn5.style.backgroundColor = "";
+        }
+        oBtn6.onmouseout = function _button6() {
+            oBtn6.style.backgroundColor = "";
+        }
+        function show() {
+            oDIV2.style.display = "block";
+            over.style.display = "block";
+        }
+        function confirm() {
+            oDIV2.style.display = "none";
+            over.style.display = "none";
+        }
+        function change_red() {
+            oDIV1.style.backgroundColor = "red";
+        }
+        function change_green() {
+            oDIV1.style.backgroundColor = "green";
+        }
+        function change_blue() {
+            oDIV1.style.backgroundColor = "blue";
+        }
+        function change_w1() {
+            oDIV1.style.width = "100px";
+        }
+        function change_w2() {
+            oDIV1.style.width = "200px";
+        }
+        function change_w3() {
+            oDIV1.style.width = "300px";
+        }
+        function change_h1() {
+            oDIV1.style.height = "100px";
+        }
+        function change_h2() {
+            oDIV1.style.height = "200px";
+        }
+        function change_h3() {
+            oDIV1.style.height = "300px";
+        }
+        function reset() {
+            oDIV1.style.width = "50px";
+            oDIV1.style.height = "50px";
+            oDIV1.style.backgroundColor = "white";
+        }
+    }
+
+</script>
+
+<body>
+    <b>请为下面的DIV设置样式：</b>
+    <input id="setting" type="button" value="点击设置" />
+    <div id="DIV1"></div>
+    <div id="DIV2">请选择背景色：
+        <input id="red" type="button" value="红" />
+        <input id="green" type="button" value="绿" />
+        <input id="blue" type="button" value="蓝" />
+        <br><br> 请选择宽(px):
+        <input id="btn1" type="button" value="100" />
+        <input id="btn2" type="button" value="200" />
+        <input id="btn3" type="button" value="300" />
+        <br><br>请选择高(px):
+        <input id="btn4" type="button" value="100" />
+        <input id="btn5" type="button" value="200" />
+        <input id="btn6" type="button" value="300" />
+        <br><br>
+        <span style="display:block; width:250px; text-align:center"><input id="reset" type="button" value="恢复" />
+        <input id="confirm" type="button" value="确定" /> </span>
+    </div>
+    <div id="over"></div>
+</body>
+
+</html>
