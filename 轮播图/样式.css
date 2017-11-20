@@ -1,0 +1,98 @@
+body,div,ul,li{
+    margin:0;
+    padding:0;
+}
+#container{
+    width:992px;
+    height:186px;
+    /*background: orange;*/
+    margin:100px auto;
+}
+.pic{
+    width:992px;
+    height:186px;
+    overflow: hidden;
+    position:relative;
+}
+.pic li{
+    list-style: none;
+    width:496px;
+    height:186px;
+    display: inline-block;
+    position: absolute;
+    transition:all 0.5s;
+}
+img{
+    width:496px;
+    height:186px;
+    background-size:100% 100%;
+    /*图片与其容器大小不一致时，用此方法可解决*/
+}
+.list1{
+    transform: translateX(0) scale(0.9);
+    /*设置元素的基点位置*/
+    transform-origin: 0 100%;
+    /*background: yellowgreen;*/
+    z-index: 2;
+}
+.list2{
+    transform: translateX(250px);
+    /*background: #ee9;*/
+    z-index:3;
+}
+.list3{
+    transform: translateX(500px) scale(0.9);
+    transform-origin: 100% 100%;
+    /*background: #348;*/
+    z-index: 2;
+}
+.list4{
+    transform: translateX(750px) scale(0.9);
+    transform-origin: 100% 100%;
+    /*background: #098;*/
+}
+.list5{
+    transform: translateX(1000px) scale(0.9);
+    /*background: #234;*/
+}
+.list6{
+    transform: translateX(1250px) scale(0.9);
+    /*background: #123;*/
+}
+.line{
+    width:992px;
+    height: 10px;
+    /*background: tan;*/
+    text-align:center;
+    position: relative;
+    left:0px;
+    top: -15px;
+    z-index:4;
+}
+.line a{
+    width: 30px;
+    height: 2px;
+    background-color: #ccc;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    top:-10px;
+}
+#first{
+    background-color: #A80000;
+}
+/*#pre,#next{*/
+    /*width:30px;*/
+    /*height:167.4px;*/
+    /*background-color: black;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*top: -167px;*/
+    /*z-index: 3;*/
+/*}*/
+/*#pre{*/
+
+/*}*/
+/*#next{*/
+    /*left:100px;*/
+/*}*/
