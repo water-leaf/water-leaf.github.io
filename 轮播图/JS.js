@@ -47,4 +47,12 @@ window.onload=function () {
         if(el.getAttribute("class")=="list3")  nextPic();
         else if(el.getAttribute("class")=="list1") prePic();
     });
+    //设置自动轮播
+    timer=setInterval(nextPic,2000);
+    document.getElementById("container").onmouseover=function () {
+        clearInterval(timer);
+    }
+    document.getElementById("container").onmouseout=function () {
+        timer=setInterval(nextPic,2000);
+    }
 };
