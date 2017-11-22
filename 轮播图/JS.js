@@ -51,7 +51,7 @@ window.onload=function () {
     timer=setInterval(nextPic,2000);
     document.getElementById("container").onmouseover=function () {
         clearInterval(timer);
-    }
+    };
     document.getElementById("container").onmouseout=function () {
         timer=setInterval(nextPic,2000);
     }
