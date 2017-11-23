@@ -1,0 +1,224 @@
+body,p,div,ul,h1,h2,hr,figure,span{
+    margin:0;
+    padding:0;
+    font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"宋体",simsun,sans-serif;
+    border:none;
+}
+input{
+    margin:0;
+    padding:0;
+    outline:none;
+    border:none;
+}
+ul{list-style-type: none;}
+a{text-decoration: none;}
+
+
+body{
+    background: white;
+    width:1350px;
+    height: 2240px;
+}
+#header{
+    width:inherit;
+    height: 70px;
+    background: #333333;
+}
+#logo{
+    width: 240px;
+    height: 70px;
+    float: left;
+    margin-left: 70px;
+    background: url(img/logo.png);
+}
+#menu{
+    width: 650px;
+    height: 70px;
+    float: right;
+    background: #333333;
+}
+#menu li{
+    width: 120px;
+    height: 70px;
+    float: left;
+}
+#menu a{
+    width: 120px;
+    height: 70px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 70px;
+}
+#menu a:hover{
+    background: #000;
+    text-decoration: underline;
+}
+#search_bg{
+    width:inherit;
+    height: 600px;
+    background: url("img/search.jpg") no-repeat center;
+}
+#center{
+    width: 602px;
+    height: 58px;
+    position: relative;
+    left: 376px;
+    top: 274px;
+    background-color: #000;
+    opacity:0.7;
+    border-radius: 10px;
+}
+#center .enter{
+    width: 450px;
+    height: 50px;
+    border-radius:10px;
+    font-size: 24px;
+    outline:none;
+    margin: 4px;
+    padding:0 10px;
+    float: left;
+    background-color: #eeeeee;
+    color: #666;
+}
+#center .search{
+    width:120px;
+    height: 50px;
+    background-color: #eee;
+    color: #666;
+    border-radius:10px;
+    margin: 4px 4px 4px 0;
+    float: right;
+    cursor: pointer;
+    font-weight:bold;
+    font-size: 26px;
+}
+#tour{
+    width:1263px;
+    height: 1232px;
+    margin:0 auto;
+    background: white;
+}
+#tour h1{
+    font-size: 45px;
+    text-align: center;
+    color: #666666;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+#tour h2{
+    font-size: 16px;
+    font-weight:500;
+    text-align: center;
+    color: #666666;
+}
+.title a{
+    color:black;
+}
+.title a:hover{
+    text-decoration: underline;
+    color: #222;
+}
+#tour figure{
+    width: 380px;
+    height: 329px;
+    display: inline-block;
+    border:1px solid #dddddd;
+    padding: 4px;
+    margin:15px 12px;
+    border-radius: 4px;
+}#tour .title{
+     font-weight: 600;
+     color: #333;
+ }
+ #tour figcaption{
+     color: #777;
+     line-height: 1.5;
+     letter-spacing: 1px;
+     font-size: 14px;
+     padding:7px 0 5px 0;
+ }
+ #tour .info{
+     padding:5px 0 0 0;
+ }
+ #tour .price{
+     color: #f60;
+     font-size: 14px;
+ }
+#tour .info strong{
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+ #tour .sat{
+     font-size: 13px;
+     color: #999;
+     font-style: normal;
+     position: relative;
+     top: 0;
+     left: 222px;
+ }
+ #tour .type{
+     background-color: #59b200;
+     color: white;
+     width: 90px;
+     height: 25px;
+     line-height:25px;
+     text-align: center;
+     font-size: 14px;
+     position: relative;
+     bottom: 314px;
+     left: 0px;
+ }
+#tour img{
+    width: 380px;
+    height: 230px;
+    vertical-align: middle;
+}
+#partner{
+    width:inherit;
+    height: 282px;
+    background: #222;
+}
+#partner a:hover{
+    text-decoration:underline;
+}
+.part{
+    width: 410px;
+    height: 280px;
+    float: left;
+}
+.part.left{
+    margin-left: 60px;
+}
+.part.right{
+    margin-right: 60px;
+}
+.part h1{
+    color: #ccc;
+    margin:10px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+.part hr{
+    border:1px dashed #777;
+    width: 360px;
+    text-align: left;
+    margin:10px 0;
+}
+.part a{
+    color: #777;
+    font-size: 20px;
+}
+.part li{
+    margin:15px 0;
+}
+#footer{
+    width:inherit;
+    height: 84px;
+    background: #000;
+}
+#footer p{
+    color: #777;
+    text-align: center;
+    line-height: 84px;
+}
