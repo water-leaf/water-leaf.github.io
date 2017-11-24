@@ -1,0 +1,63 @@
+body,ul{
+    margin:0;
+    padding:0;
+}
+#box{
+    position:relative;
+    width: 854px;
+    height:504px;
+    background: #c80000 url("images/bg1.png");
+    margin:50px auto;
+}
+#rotateArrow{
+    position:absolute;
+    left:181px;
+    top: 103px;
+    width:294px;
+    height:294px;
+    background: url("images/arrow.png");
+}
+#user{
+    position: relative;
+    top:138px;
+    left: 678px;
+    width: 128px;
+    height: 330px;
+    overflow: hidden;
+    /*border:1px solid yellowgreen;*/
+}
+#user ul{
+    position:relative;
+    top:0px;
+}
+li{
+    height: 22px;
+    list-style:url("images/user.png");
+    margin-left: 28px;
+    color:#ff9900;
+}
+#result{
+    position:relative;
+    left:180px;
+    top: -172px;
+    width:300px;
+    height:150px;
+    background:rgba(0,0,0,0.5);
+    /*opacity:0.5;*/
+    /*用opacity的话文本将不能正常显示*/
+    border-radius:10px;
+    display: none;
+}
+#result p{
+    color:#d0d0d0;
+    text-align:center;
+    line-height:150px;
+}
+#close{
+    position: absolute;
+    top:2px;
+    left:274px;
+    width:24px;
+    height:24px;
+    background:url("images/close.png");
+}
