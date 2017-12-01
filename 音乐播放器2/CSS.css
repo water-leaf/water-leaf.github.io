@@ -1,0 +1,91 @@
+body,div,h2,audio,p{
+    margin:0;
+    padding:0;
+}
+body{
+    background:greenyellow;
+}
+#phone,#top,#info,#container,#bg,#footer{
+    width:322px;
+}
+#phone{
+    position: relative;
+    height:640px;
+    margin:50px auto;
+}
+#top{
+    height:42px;
+    background:url("images/phone_top.png");
+}
+#info{
+    height:20px;
+    background:url("images/top.jpg");
+}
+#lrc,#phone span{
+    border:1px solid #fff;
+    border-top:0;/*低版本IE不支持none*/
+    border-bottom:0;
+}
+#lrc{
+    width:320px;
+    height:490px;
+    background:url("images/0.jpg");
+    background-size:cover;
+    /*background:url("images/0.jpg") no-repeat 0 0/cover;*/
+    overflow:hidden;
+}
+#phone span{
+    display: block;
+    position: relative;
+    left:0;
+    width: 320px;
+    height:40px;
+    background: rgb(211,195,180);
+}
+#name{
+    width:260px;
+    height: 40px;
+    position:relative;
+    left:30px;
+    color:#625959;
+    text-align:center;
+    text-indent: 4px;
+    line-height:40px;
+    font-size:16px;
+    overflow:hidden;
+}
+#songName{
+    position: relative;
+    left:0;
+}
+#lrc p{
+    color:#625959;
+    text-align:center;
+    height:20px;
+    line-height:20px;
+}
+
+#content{
+    position:relative;
+    top:0px;
+}
+#btn{
+    position:absolute;
+    left:134px;
+    top:524px;
+    width:50px;
+    height:50px;
+    background:url("images/normalmusic.svg");
+    background-size:100% 100%;
+}
+#footer{
+    height:47px;
+    background:url("images/phone_bottom.png");
+}
+.rotate{
+     animation:rot 5s linear infinite;
+}
+@keyframes rot {
+    from{transform: rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
