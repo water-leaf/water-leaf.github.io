@@ -3,7 +3,7 @@ body,div,h2,audio,p{
     padding:0;
 }
 body{
-    background:greenyellow;
+    background:black;
 }
 #phone,#top,#info,#container,#bg,#footer{
     width:322px;
