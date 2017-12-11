@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
             <input class="btn btn-primary" type="button" value="添加" @click="add()">
-            <input class="btn btn-danger" type="button" value="重置">
+            <input class="btn btn-danger" type="reset" value="重置">
         </div>
     </form>
     <hr>
@@ -30,17 +30,19 @@
             <th class="text-center">年龄</th>
             <th class="text-center">操作</th>
         </tr>
-        <tr class="text-center" v-for="item in myData">
-            <td>{{$index+1}}</td>
+        <tr class="text-center" v-for="(item,index) in myData">
+            <td>{{index+1}}</td>
             <td>{{item.name}}</td>
             <td>{{item.age}}</td>
             <td>
-                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer">删除</button>
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer"
+                        @click="nowIndex=index">删除</button>
             </td>
         </tr>
         <tr v-show="myData.length!=0">
             <td colspan="4" class="text-right">
-                <button class="btn btn-danger btn-sm">删除全部</button>
+                <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#layer"
+                        @click="nowIndex=-2">删除全部</button>
             </td>
         </tr>
         <tr v-show="myData.length==0">
@@ -56,11 +58,12 @@
                     <button type="button" class="close" data-dismiss="modal">
                         <span>&times;</span>
                     </button>
-                    <h4 class="modal-title">确认删除么？</h4>
+                    <h4 class="modal-title" v-show="nowIndex>=0">确认删除么？</h4>
+                    <h4 class="modal-title" v-show="nowIndex<0">确认删除全部么？</h4>
                 </div>
                 <div class="modal-body">
                     <button class="btn btn-primary btn-sm" data-dismiss="modal">取消</button>
-                    <button class="btn btn-danger btn-sm">确认</button>
+                    <button class="btn btn-danger btn-sm" @click="deleteMsg(nowIndex)">确认</button>
                 </div>
             </div>
         </div>
@@ -75,16 +78,23 @@
         data: {
             myData: [],
             username:"",
-            age:""
+            age:"",
+            nowIndex:-1
         },
         methods:{
             add:function () {
                 this.myData.push({
                     name:this.username,
-                    age:this.age,
+                    age:this.age
                 });
                 this.username="";
                 this.age="";
+            },
+            deleteMsg:function (n) {
+                if(n==-2)
+                    this.myData=[];
+                else
+                    this.myData.splice(n,1);
             }
         }
     })
